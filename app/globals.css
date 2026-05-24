@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hero image styles */
+.hero-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.hero-img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.45);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  object-fit: cover;
+  transition: transform 200ms ease, filter 200ms ease;
+}
+.hero-img:hover {
+  transform: translateY(-4px) scale(1.01);
+  filter: brightness(1.02) saturate(1.05);
+}
+@media (max-width: 640px) {
+  .hero-img { max-width: 320px; }
+}

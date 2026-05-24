@@ -20,7 +20,7 @@ export default function About() {
         <h2 className="text-2xl font-semibold mb-4">正在学习</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-xl font-medium mb-3">计算机</h3>
+            <h3 className="text-xl font-medium mb-3">计算机类</h3>
             <ul className="text-gray-700 space-y-2">
               <li> Web程序设计</li>
               <li> MySQL数据库程序设计</li>
@@ -38,28 +38,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* 工作经历 */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">荣誉与证书</h2>
-        <div className="space-y-6">
-          <div className="border-l-4 border-blue-500 pl-4">
-            <h3 className="text-xl font-medium">全国计算机等级考试</h3>
-            <p className="text-gray-600"></p>
-            <p className="text-gray-700 mt-2">
-            一级网络安全素质教育 | 优秀 | 2026年3月
-            </p>
-          </div>
-          <div className="border-l-4 border-blue-500 pl-4">
-            <h3 className="text-xl font-medium">全国计算机等级考试</h3>
-            <p className="text-gray-600"></p>
-            <p className="text-gray-700 mt-2">
-              一级人工智能与大模型基础 | 合格 | 2026年3月
-            </p>
-          </div>
-        </div>
-      </section>
-
 
       {/* 兴趣与爱好 */}
       <section className="mb-12">
@@ -81,7 +59,7 @@ export default function About() {
           <p>📫 Email: <a href="mailto:jmxw0814@gmail.com" className="text-blue-600 hover:underline">jmxw0814@gmail.com</a>、
            <a href="mailto:zjm220628@qq.com" className="text-blue-600 hover:underline">zjm220628@qq.com</a></p>
           <p>🐙 GitHub: <a href="https://github.com/GardenEric260122" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GardenEric260122</a></p>
-         <p>🐧 QQ：<a href="tencent://message/?uin=1718535409" className="text-blue-600 hover:underline">1718535409</a></p>
+         <p>🐧 QQ：<a href="https://wpa.qq.com/msgrd?v=3&uin=1718535409&site=qq&menu=yes" className="text-blue-600 hover:underline">1718535409</a></p>
         </div>
       </section>
     </main>

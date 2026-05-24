@@ -49,13 +49,6 @@ export default function RootLayout({
                 Posts
               </Link>
               <Link
-                href="/dashboard"
-                className="hover:text-gray-500"
-              >
-                Dashboard
-              </Link>
-
-              <Link
                 href="/about"
                 className="hover:text-gray-500"
               >

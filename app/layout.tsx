@@ -9,7 +9,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "逸風Ventus's Blog",
   description: "My Next.js App",
 };
 
@@ -43,7 +43,13 @@ export default function RootLayout({
                 Home
               </Link>
               <Link
-                href="/posts"
+                href="/tools"
+                className="hover:text-gray-500"
+              >
+                Tools
+              </Link>
+              <Link
+                href="/blog"
                 className="hover:text-gray-500"
               >
                 Posts

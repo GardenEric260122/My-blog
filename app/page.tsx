@@ -10,7 +10,7 @@ export default function Home() {
         {/* 图片 */}
         <div className="mb-6">
           <Image
-            src="/images/xueshi.jpg"
+            src="/images/ccsl.jpg"
             alt="avatar"
             width={160}
             height={160}

@@ -19,8 +19,14 @@ export function getPosts() {
     return {
       slug,
       title: data.title,
-      date: new Date(data.date).toLocaleDateString(),
+      date: new Date(data.date).toLocaleDateString('zh-CN', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }),
+      rawDate: new Date(data.date).getTime(), // 用于排序
       description: data.description,
-    };
-  });
+  };
+}).sort((a, b) => b.rawDate - a.rawDate);
 }

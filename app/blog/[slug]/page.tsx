@@ -3,6 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 
+import Waline from "@/components/Waline";
+
 export default async function PostPage({
   params,
 }: {
@@ -25,8 +27,14 @@ export default async function PostPage({
   });
 
   return (
-    <article className="prose mx-auto p-8">
-      {mdx}
-    </article>
+    <>
+      <article className="prose mx-auto p-8">
+        {mdx}
+      </article>
+
+      <div className="max-w-3xl mx-auto px-8 pb-12">
+        <Waline path={`/blog/${slug}`} />
+      </div>
+    </>
   );
 }

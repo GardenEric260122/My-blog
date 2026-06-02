@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import Link from "next/link";
 
 import "./globals.css";
+import "@waline/client/waline.css";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -53,6 +54,12 @@ export default function RootLayout({
                 className="hover:text-gray-500"
               >
                 Posts
+              </Link>
+              <Link
+                href="/guestbook"
+                className="hover:text-gray-500"
+              >
+                Guestbook
               </Link>
               <Link
                 href="/about"

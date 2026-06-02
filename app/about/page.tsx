@@ -23,7 +23,7 @@ export default function About() {
             <h3 className="text-xl font-medium mb-3">计算机类</h3>
             <ul className="text-gray-700 space-y-2">
               <li> Web程序设计</li>
-              <li> MySQL数据库程序设计</li>
+              <li> 数据库程序设计</li>
               <li> Linux系统运维</li>
               <li> 网络工程 </li>
             </ul>

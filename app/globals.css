@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -48,4 +50,7 @@ body {
 }
 @media (max-width: 640px) {
   .hero-img { max-width: 320px; }
+}
+.test-red {
+  color: red;
 }

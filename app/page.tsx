@@ -26,6 +26,7 @@ export default function Home() {
           Welcome to my blog!
         </p>
       </div>
+      
 
       {/* Footer（加在这里） */}
       <footer className="pb-6 text-sm text-gray-400">

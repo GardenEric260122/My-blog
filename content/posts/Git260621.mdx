@@ -1,0 +1,188 @@
+---
+title: Git常用命令介绍及速查表
+description: Tutorial
+---
+
+![](/images/Git-Logo-2Color.png)图片来源：*https\://git-scm.com/community/logos*
+
+Git是最常用的代码、程序、脚本的版本管理系统。它有着简单、快速、免费且开源的特点。通过其与GitHub、GitLab等代码托管平台合作即可轻松实现代码托管服务。Git特点的详细介绍在[Git官方介绍](https://git-scm.com/about)中。
+
+由于去年八月更新的Git 2.51有把 git checkout 正式拆分成 git switch 和 git restore，弃用了 git whatchanged等的重大更新，使得很多几年前的教程存在不合适的地方，遂作出以下教程，以适配Git 版本为2.51到2.54（目前最新）的使用，未来版本的适用性需要结合官方文档进行判断。
+
+查看Git版本的方法是在终端输入git -v或git --version。
+
+本文采用按具体开发场景的先后顺序逐一介绍Git命令的用法以及按场景分类的速查表。
+
+### 一、Git常用命令介绍
+
+这里介绍了我认为十分常用的Git命令，这些大多我都亲自使用过或是听说过，覆盖了几乎所有的开发场景。
+
+开始开发：
+
+```
+git init
+// 初始化git仓库，第一步git命令。
+git clone <url>
+// 克隆远程仓库，注意实际使用不要加<>。
+```
+
+配置：
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "Youremail@example.com"
+// 配置当前用户的姓名和邮箱。
+```
+
+准备提交：
+
+```
+git add .
+git add <file>
+// 将全部的或是部分的文件添加到暂存区，同样使用时不要加<>，文件名要带后缀。
+git status
+// 查看暂存区状态。
+```
+
+提交操作：
+
+```
+git commit -m "message"
+// 提交修改，并添加说明，使用时要加英文引号""。
+```
+
+分支操作：
+
+```
+git switch -c <name>
+// 创建并移动到一个新的分支。
+git switch <name>
+// 移动到某一分支，同样使用时不要加<>。
+git branch
+// 列出所有分支。
+git switch banana
+git rebase main
+// 变基版本分支。
+git switch main
+git merge banana
+// 合并版本分支。
+```
+
+撤销修改：
+
+```
+git restore .
+git restore <file>
+// 撤销所有或部分文件的未暂存的修改，注意其操作不可逆。
+git reset --hard
+// 撤销所有文件的已暂存和未暂存的修改。
+git restore --staged --worktree <file>
+// 撤销某一文件的已暂存和未暂存的修改。
+git reset HEAD^
+// 撤销最近一次的提交。
+```
+
+查看历史记录：
+
+```
+git log --oneline
+// 查看提交日志。
+git log <file>
+// 查看某一文件的提交日志。
+```
+
+推送与拉取：
+
+```
+git push origin main
+// 将主分支推送远程源。
+git push -u origin <name>
+// 首次推送至远程分支。
+git fetch origin main
+// 拉取远程更新，但不更改本地代码。
+git pull origin main
+git pull
+// 拉取远程更新，并合并至现有代码中。
+git pull --rebase
+// 摘取远程更新，并变基至现有代码中。
+```
+
+***
+
+### 二、Git基础命令速查表
+
+```
+git init
+// 初始化git仓库，第一步git命令。
+git clone <url>
+// 克隆远程仓库，注意实际使用不要加<>。
+git config --global user.name "Your Name"
+git config --global user.email "Youremail@example.com"
+// 配置当前用户的姓名和邮箱。
+git add .
+git add <file>
+// 将全部的或是部分的文件添加到暂存区，同样使用时不要加<>，文件名要带后缀。
+git status
+// 查看暂存区状态。
+git commit -m "message"
+// 提交修改，并添加说明，使用时要加英文引号""。
+git switch -c <name>
+// 创建并移动到一个新的分支。
+git switch <name>
+// 移动到某一分支，同样使用时不要加<>。
+git branch
+// 列出所有分支。
+git restore .
+git restore <file>
+// 撤销所有或部分文件的未暂存的修改，注意其操作不可逆。
+git reset --hard
+// 撤销所有文件的已暂存和未暂存的修改。
+git restore --staged --worktree <file>
+// 撤销某一文件的已暂存和未暂存的修改。
+git reset HEAD^
+// 撤销最近一次的提交。
+git log --oneline
+// 查看提交日志。
+git log <file>
+// 查看某一文件的提交日志。
+git switch banana
+git rebase main
+// 变基版本分支。
+git switch main
+git merge banana
+// 合并版本分支。
+git push origin main
+// 将主分支推送远程源。
+git push -u origin <name>
+// 首次推送至远程分支。
+git fetch origin main
+// 拉取远程更新，但不更改本地代码。
+git pull origin main
+git pull
+// 拉取远程更新，并合并至现有代码中。
+git pull --rebase
+// 摘取远程更新，并变基至现有代码中。
+
+```
+
+三、参考文献
+
+[*Git命令官方速查表*](https://git-scm.com/cheat-sheet)**
+
+**[*GitHub文档*](https://docs.github.com/zh/get-started/using-git/about-git)**
+
+[*Git 2.51的亮点*](https://github.blog/open-source/git/highlights-from-git-2-51/)
+
+[*git命令大全​*](https://gist.github.com/hsuyeung/c9dfb2614e89dc7bf6ac45cbd7fe9318#file-git_toturial)**
+
+**[*Git基本操作*](https://www.runoob.com/git/git-basic-operations.html)**
+
+**[*常用Git命令清单*](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)**
+
+如需深入了解更多Git高级功能，请查阅官方文档的[*索引*](https://git-scm.com/docs)，以及[*参考书*](https://git-scm.com/book/en/v2)**
+
+因笔者能力有限，如有疏漏错误之处还请多多指教。
+
+2026年6月19日
+
+*#Git#​#CS#​#版本控制#​#GitHub#​*
